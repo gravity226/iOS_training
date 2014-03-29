@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>8E8759EE-91CF-4A43-854D-BC1AB41F7E78</string>
+	<key>IDESourceControlProjectName</key>
+	<string>CodeTests</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>80354A83-A557-401E-BBDC-36E0A2B3FA00</key>
+		<string>https://github.com/gravity226/iOS_training.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>CodeTests/CodeTests.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>80354A83-A557-401E-BBDC-36E0A2B3FA00</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/gravity226/iOS_training.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>80354A83-A557-401E-BBDC-36E0A2B3FA00</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>80354A83-A557-401E-BBDC-36E0A2B3FA00</string>
+			<key>IDESourceControlWCCName</key>
+			<string>HelloWorld</string>
+		</dict>
+	</array>
+</dict>
+</plist>
