@@ -23,6 +23,8 @@
     
     // instantiate NSMutableArray
     data = [[NSMutableArray alloc] initWithObjects:@"Dog",@"Cat",@"Mouse", nil];
+    
+    self.navigationItem.leftBarButtonItem = self.editButtonItem;
 }
 
 - (NSInteger)numberOfSectionsInTableView: (UITableView *) tableView
@@ -70,6 +72,23 @@
         [self.tableView beginUpdates];
         [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
         [self.tableView endUpdates];
+    }
+}
+
+-(void)setEditing:(BOOL)editing animated:(BOOL)animated
+{
+    [super setEditing:editing animated:animated];
+    [self.tableView setEditing:editing animated:animated];
+}
+
+-(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (editingStyle == UITableViewCellEditingStyleDelete)
+    {
+        // remove from NSMutable array
+        [data removeObjectAtIndex:indexPath.row];
+        //delete from table
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationTop];
     }
 }
 
