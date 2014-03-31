@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "AddViewController.h"
 
 @interface ViewController ()
 
@@ -51,6 +52,25 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(IBAction)unwindToTableViewController:(UIStoryboardSegue *)sender
+{
+    AddViewController *addViewController = (AddViewController *) sender.sourceViewController;
+    NSString *text = addViewController.textField.text;
+    
+    // If not blank and not whitespace
+    if (![text length] == 0 && ![[text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] length] == 0)
+    {
+        // add it to the top of the datasource
+        [data insertObject:text atIndex:0];
+        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+        
+        // insert into the table view
+        [self.tableView beginUpdates];
+        [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+        [self.tableView endUpdates];
+    }
 }
 
 @end

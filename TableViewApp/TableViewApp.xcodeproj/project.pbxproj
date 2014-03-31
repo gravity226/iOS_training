@@ -21,6 +21,7 @@
 		D3E9CD0618E75F5400F8F899 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3E9CCE818E75F5400F8F899 /* UIKit.framework */; };
 		D3E9CD0E18E75F5400F8F899 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D3E9CD0C18E75F5400F8F899 /* InfoPlist.strings */; };
 		D3E9CD1018E75F5400F8F899 /* TableViewAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E9CD0F18E75F5400F8F899 /* TableViewAppTests.m */; };
+		D3E9CD1E18E98D3900F8F899 /* AddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E9CD1D18E98D3900F8F899 /* AddViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		D3E9CD0B18E75F5400F8F899 /* TableViewAppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TableViewAppTests-Info.plist"; sourceTree = "<group>"; };
 		D3E9CD0D18E75F5400F8F899 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D3E9CD0F18E75F5400F8F899 /* TableViewAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewAppTests.m; sourceTree = "<group>"; };
+		D3E9CD1C18E98D3900F8F899 /* AddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddViewController.h; sourceTree = "<group>"; };
+		D3E9CD1D18E98D3900F8F899 /* AddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +122,8 @@
 				D3E9CCFA18E75F5400F8F899 /* ViewController.m */,
 				D3E9CCFC18E75F5400F8F899 /* Images.xcassets */,
 				D3E9CCEB18E75F5400F8F899 /* Supporting Files */,
+				D3E9CD1C18E98D3900F8F899 /* AddViewController.h */,
+				D3E9CD1D18E98D3900F8F899 /* AddViewController.m */,
 			);
 			path = TableViewApp;
 			sourceTree = "<group>";
@@ -251,6 +256,7 @@
 			files = (
 				D3E9CCFB18E75F5400F8F899 /* ViewController.m in Sources */,
 				D3E9CCF518E75F5400F8F899 /* AppDelegate.m in Sources */,
+				D3E9CD1E18E98D3900F8F899 /* AddViewController.m in Sources */,
 				D3E9CCF118E75F5400F8F899 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -456,6 +462,7 @@
 				D3E9CD1518E75F5400F8F899 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D3E9CD1618E75F5400F8F899 /* Build configuration list for PBXNativeTarget "TableViewAppTests" */ = {
 			isa = XCConfigurationList;
@@ -464,6 +471,7 @@
 				D3E9CD1818E75F5400F8F899 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
