@@ -11,3 +11,9 @@
 @interface ViewController : UIViewController
 
 @end
+
+void myFunction (int i)
+{
+    i += 10;
+    NSLog(@"i = %i", i);
+}

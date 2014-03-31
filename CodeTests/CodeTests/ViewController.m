@@ -19,6 +19,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
+    // if statements
     int x = 10;
     if ( x > 9 )
     {
@@ -36,6 +37,25 @@
         NSLog(@"x is less than 10");
     else
         NSLog(@"x is greater than 12");
+    
+    // for loop
+    for( x = 0; x <= 100; x += 10)
+    {
+        NSLog(@"--- x = %i", x);
+    }
+    
+    // do while
+    bool a = false;
+    do
+    {
+        NSLog(@"This is the while loop talking");
+    } while (a);
+    
+    // call a function from .h
+    int b = 10;
+    myFunction(b);
+    
+    NSLog(@"b = %i", b);
 }
 
 - (void)didReceiveMemoryWarning
