@@ -270,7 +270,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="My To-Do List" id="dH1-n5-Eno">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="2TI-8y-XNc"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="2TI-8y-XNc">
+                            <connections>
+                                <segue destination="T0A-J9-izO" kind="push" id="2Kd-7p-vTF"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="693-T2-YoD" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -298,11 +302,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="6kN-cP-J78" firstAttribute="top" secondItem="lsD-p4-IZl" secondAttribute="bottom" constant="78" id="0dj-6y-0Si"/>
+                            <constraint firstItem="6kN-cP-J78" firstAttribute="top" secondItem="lsD-p4-IZl" secondAttribute="bottom" constant="34" id="0dj-6y-0Si"/>
                             <constraint firstAttribute="trailing" secondItem="6kN-cP-J78" secondAttribute="trailing" constant="20" id="TKg-oB-MqK"/>
                             <constraint firstItem="6kN-cP-J78" firstAttribute="leading" secondItem="pjX-bK-Ny5" secondAttribute="leading" constant="20" id="fdd-Nt-kng"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Mks-oX-suw"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4rS-m2-3Ix" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
