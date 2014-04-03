@@ -24,6 +24,12 @@
 		D3C06DF718ECE3F400EFEC99 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3C06DD218ECE3F400EFEC99 /* UIKit.framework */; };
 		D3C06DFF18ECE3F400EFEC99 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D3C06DFD18ECE3F400EFEC99 /* InfoPlist.strings */; };
 		D3C06E0118ECE3F400EFEC99 /* DragDropTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D3C06E0018ECE3F400EFEC99 /* DragDropTests.m */; };
+		D3C06E1C18EE24AE00EFEC99 /* attribution.txt in Resources */ = {isa = PBXBuildFile; fileRef = D3C06E1618EE24AE00EFEC99 /* attribution.txt */; };
+		D3C06E1D18EE24AE00EFEC99 /* bird.png in Resources */ = {isa = PBXBuildFile; fileRef = D3C06E1718EE24AE00EFEC99 /* bird.png */; };
+		D3C06E1E18EE24AE00EFEC99 /* blue-shooting-stars.png in Resources */ = {isa = PBXBuildFile; fileRef = D3C06E1818EE24AE00EFEC99 /* blue-shooting-stars.png */; };
+		D3C06E1F18EE24AE00EFEC99 /* cat.png in Resources */ = {isa = PBXBuildFile; fileRef = D3C06E1918EE24AE00EFEC99 /* cat.png */; };
+		D3C06E2018EE24AE00EFEC99 /* dog.png in Resources */ = {isa = PBXBuildFile; fileRef = D3C06E1A18EE24AE00EFEC99 /* dog.png */; };
+		D3C06E2118EE24AE00EFEC99 /* turtle.png in Resources */ = {isa = PBXBuildFile; fileRef = D3C06E1B18EE24AE00EFEC99 /* turtle.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +66,12 @@
 		D3C06DFC18ECE3F400EFEC99 /* DragDropTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DragDropTests-Info.plist"; sourceTree = "<group>"; };
 		D3C06DFE18ECE3F400EFEC99 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D3C06E0018ECE3F400EFEC99 /* DragDropTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DragDropTests.m; sourceTree = "<group>"; };
+		D3C06E1618EE24AE00EFEC99 /* attribution.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = attribution.txt; sourceTree = "<group>"; };
+		D3C06E1718EE24AE00EFEC99 /* bird.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bird.png; sourceTree = "<group>"; };
+		D3C06E1818EE24AE00EFEC99 /* blue-shooting-stars.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blue-shooting-stars.png"; sourceTree = "<group>"; };
+		D3C06E1918EE24AE00EFEC99 /* cat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cat.png; sourceTree = "<group>"; };
+		D3C06E1A18EE24AE00EFEC99 /* dog.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dog.png; sourceTree = "<group>"; };
+		D3C06E1B18EE24AE00EFEC99 /* turtle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = turtle.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +143,7 @@
 				D3C06DEB18ECE3F400EFEC99 /* Spaceship.png */,
 				D3C06DED18ECE3F400EFEC99 /* Images.xcassets */,
 				D3C06DD718ECE3F400EFEC99 /* Supporting Files */,
+				D3C06E1518EE24AE00EFEC99 /* DragDropImages */,
 			);
 			path = DragDrop;
 			sourceTree = "<group>";
@@ -162,6 +175,19 @@
 				D3C06DFD18ECE3F400EFEC99 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D3C06E1518EE24AE00EFEC99 /* DragDropImages */ = {
+			isa = PBXGroup;
+			children = (
+				D3C06E1618EE24AE00EFEC99 /* attribution.txt */,
+				D3C06E1718EE24AE00EFEC99 /* bird.png */,
+				D3C06E1818EE24AE00EFEC99 /* blue-shooting-stars.png */,
+				D3C06E1918EE24AE00EFEC99 /* cat.png */,
+				D3C06E1A18EE24AE00EFEC99 /* dog.png */,
+				D3C06E1B18EE24AE00EFEC99 /* turtle.png */,
+			);
+			path = DragDropImages;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -242,9 +268,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3C06DDB18ECE3F400EFEC99 /* InfoPlist.strings in Resources */,
+				D3C06E2118EE24AE00EFEC99 /* turtle.png in Resources */,
 				D3C06DEE18ECE3F400EFEC99 /* Images.xcassets in Resources */,
+				D3C06E1F18EE24AE00EFEC99 /* cat.png in Resources */,
+				D3C06E2018EE24AE00EFEC99 /* dog.png in Resources */,
+				D3C06E1D18EE24AE00EFEC99 /* bird.png in Resources */,
 				D3C06DEC18ECE3F400EFEC99 /* Spaceship.png in Resources */,
 				D3C06DE418ECE3F400EFEC99 /* Main.storyboard in Resources */,
+				D3C06E1C18EE24AE00EFEC99 /* attribution.txt in Resources */,
+				D3C06E1E18EE24AE00EFEC99 /* blue-shooting-stars.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,6 +505,7 @@
 				D3C06E0618ECE3F400EFEC99 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D3C06E0718ECE3F400EFEC99 /* Build configuration list for PBXNativeTarget "DragDropTests" */ = {
 			isa = XCConfigurationList;
@@ -481,6 +514,7 @@
 				D3C06E0918ECE3F400EFEC99 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
