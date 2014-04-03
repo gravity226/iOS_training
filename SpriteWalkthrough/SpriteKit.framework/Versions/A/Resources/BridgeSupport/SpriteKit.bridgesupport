@@ -1,0 +1,315 @@
+<?xml version='1.0'?>
+<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/IOKit.framework'/>
+<depends_on path='/System/Library/Frameworks/QuartzCore.framework'/>
+<depends_on path='/System/Library/Frameworks/GLKit.framework'/>
+<depends_on path='/System/Library/Frameworks/OpenAL.framework'/>
+<depends_on path='/System/Library/Frameworks/AudioToolbox.framework'/>
+<depends_on path='/System/Library/Frameworks/JavaScriptCore.framework'/>
+<depends_on path='/System/Library/Frameworks/IOSurface.framework'/>
+<depends_on path='/System/Library/Frameworks/OpenGL.framework'/>
+<depends_on path='/System/Library/Frameworks/AVFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/Cocoa.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreText.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreVideo.framework'/>
+<depends_on path='/System/Library/Frameworks/AppKit.framework'/>
+<depends_on path='/System/Library/Frameworks/ImageIO.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreGraphics.framework'/>
+<enum name='SKActionTimingEaseIn' value64='1'/>
+<enum name='SKActionTimingEaseInEaseOut' value64='3'/>
+<enum name='SKActionTimingEaseOut' value64='2'/>
+<enum name='SKActionTimingLinear' value64='0'/>
+<enum name='SKBlendModeAdd' value64='1'/>
+<enum name='SKBlendModeAlpha' value64='0'/>
+<enum name='SKBlendModeMultiply' value64='3'/>
+<enum name='SKBlendModeMultiplyX2' value64='4'/>
+<enum name='SKBlendModeReplace' value64='6'/>
+<enum name='SKBlendModeScreen' value64='5'/>
+<enum name='SKBlendModeSubtract' value64='2'/>
+<enum name='SKInterpolationModeLinear' value64='1'/>
+<enum name='SKInterpolationModeSpline' value64='2'/>
+<enum name='SKInterpolationModeStep' value64='3'/>
+<enum name='SKLabelHorizontalAlignmentModeCenter' value64='0'/>
+<enum name='SKLabelHorizontalAlignmentModeLeft' value64='1'/>
+<enum name='SKLabelHorizontalAlignmentModeRight' value64='2'/>
+<enum name='SKLabelVerticalAlignmentModeBaseline' value64='0'/>
+<enum name='SKLabelVerticalAlignmentModeBottom' value64='3'/>
+<enum name='SKLabelVerticalAlignmentModeCenter' value64='1'/>
+<enum name='SKLabelVerticalAlignmentModeTop' value64='2'/>
+<enum name='SKRepeatModeClamp' value64='1'/>
+<enum name='SKRepeatModeLoop' value64='2'/>
+<enum name='SKSceneScaleModeAspectFill' value64='1'/>
+<enum name='SKSceneScaleModeAspectFit' value64='2'/>
+<enum name='SKSceneScaleModeFill' value64='0'/>
+<enum name='SKSceneScaleModeResizeFill' value64='3'/>
+<enum name='SKTextureFilteringLinear' value64='1'/>
+<enum name='SKTextureFilteringNearest' value64='0'/>
+<enum name='SKTransitionDirectionDown' value64='1'/>
+<enum name='SKTransitionDirectionLeft' value64='3'/>
+<enum name='SKTransitionDirectionRight' value64='2'/>
+<enum name='SKTransitionDirectionUp' value64='0'/>
+<class name='SKAction'>
+<method class_method='true' selector='animateWithTextures:timePerFrame:resize:restore:'>
+<arg index='2' type64='B'/>
+<arg index='3' type64='B'/>
+</method>
+<method class_method='true' selector='customActionWithDuration:actionBlock:'>
+<arg function_pointer='true' index='1' type64='@?'>
+<arg type64='@'/>
+<arg type64='d'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method class_method='true' selector='followPath:asOffset:orientToPath:duration:'>
+<arg index='1' type64='B'/>
+<arg index='2' type64='B'/>
+</method>
+<method class_method='true' selector='playSoundFileNamed:waitForCompletion:'>
+<arg index='1' type64='B'/>
+</method>
+<method class_method='true' selector='rotateToAngle:duration:shortestUnitArc:'>
+<arg index='2' type64='B'/>
+</method>
+<method class_method='true' selector='runBlock:'>
+<arg function_pointer='true' index='0' type64='@?'>
+<retval type64='v'/>
+</arg>
+</method>
+<method class_method='true' selector='runBlock:queue:'>
+<arg function_pointer='true' index='0' type64='@?'>
+<retval type64='v'/>
+</arg>
+</method>
+</class>
+<class name='SKEffectNode'>
+<method selector='setShouldCenterFilter:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='setShouldEnableEffects:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='setShouldRasterize:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='shouldCenterFilter'>
+<retval type64='B'/>
+</method>
+<method selector='shouldEnableEffects'>
+<retval type64='B'/>
+</method>
+<method selector='shouldRasterize'>
+<retval type64='B'/>
+</method>
+</class>
+<class name='SKNode'>
+<method selector='containsPoint:'>
+<retval type64='B'/>
+</method>
+<method selector='enumerateChildNodesWithName:usingBlock:'>
+<arg function_pointer='true' index='1' type64='@?'>
+<arg type64='@'/>
+<arg type64='^B'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='hasActions'>
+<retval type64='B'/>
+</method>
+<method selector='hidden'>
+<retval type64='B'/>
+</method>
+<method selector='inParentHierarchy:'>
+<retval type64='B'/>
+</method>
+<method selector='intersectsNode:'>
+<retval type64='B'/>
+</method>
+<method selector='isUserInteractionEnabled'>
+<retval type64='B'/>
+</method>
+<method selector='paused'>
+<retval type64='B'/>
+</method>
+<method selector='runAction:completion:'>
+<arg function_pointer='true' index='1' type64='@?'>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='setHidden:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='setPaused:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='setUserInteractionEnabled:'>
+<arg index='0' type64='B'/>
+</method>
+</class>
+<class name='SKPhysicsBody'>
+<method selector='affectedByGravity'>
+<retval type64='B'/>
+</method>
+<method selector='allowsRotation'>
+<retval type64='B'/>
+</method>
+<method selector='dynamic'>
+<retval type64='B'/>
+</method>
+<method selector='resting'>
+<retval type64='B'/>
+</method>
+<method selector='setAffectedByGravity:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='setAllowsRotation:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='setDynamic:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='setResting:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='setUsesPreciseCollisionDetection:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='usesPreciseCollisionDetection'>
+<retval type64='B'/>
+</method>
+</class>
+<class name='SKPhysicsJointPin'>
+<method selector='setShouldEnableLimits:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='shouldEnableLimits'>
+<retval type64='B'/>
+</method>
+</class>
+<class name='SKPhysicsJointSliding'>
+<method selector='setShouldEnableLimits:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='shouldEnableLimits'>
+<retval type64='B'/>
+</method>
+</class>
+<class name='SKPhysicsWorld'>
+<method selector='enumerateBodiesAlongRayStart:end:usingBlock:'>
+<arg function_pointer='true' index='2' type64='@?'>
+<arg type64='@'/>
+<arg type64='{CGPoint=dd}'/>
+<arg type64='{CGVector=dd}'/>
+<arg type64='^B'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='enumerateBodiesAtPoint:usingBlock:'>
+<arg function_pointer='true' index='1' type64='@?'>
+<arg type64='@'/>
+<arg type64='^B'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='enumerateBodiesInRect:usingBlock:'>
+<arg function_pointer='true' index='1' type64='@?'>
+<arg type64='@'/>
+<arg type64='^B'/>
+<retval type64='v'/>
+</arg>
+</method>
+</class>
+<class name='SKShapeNode'>
+<method selector='antialiased'>
+<retval type64='B'/>
+</method>
+<method selector='setAntialiased:'>
+<arg index='0' type64='B'/>
+</method>
+</class>
+<class name='SKTexture'>
+<method class_method='true' selector='preloadTextures:withCompletionHandler:'>
+<arg function_pointer='true' index='1' type64='@?'>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='preloadWithCompletionHandler:'>
+<arg function_pointer='true' index='0' type64='@?'>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='setUsesMipmaps:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='usesMipmaps'>
+<retval type64='B'/>
+</method>
+</class>
+<class name='SKTextureAtlas'>
+<method class_method='true' selector='preloadTextureAtlases:withCompletionHandler:'>
+<arg function_pointer='true' index='1' type64='@?'>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='preloadWithCompletionHandler:'>
+<arg function_pointer='true' index='0' type64='@?'>
+<retval type64='v'/>
+</arg>
+</method>
+</class>
+<class name='SKTransition'>
+<method selector='pausesIncomingScene'>
+<retval type64='B'/>
+</method>
+<method selector='pausesOutgoingScene'>
+<retval type64='B'/>
+</method>
+<method selector='setPausesIncomingScene:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='setPausesOutgoingScene:'>
+<arg index='0' type64='B'/>
+</method>
+</class>
+<class name='SKView'>
+<method selector='asynchronous'>
+<retval type64='B'/>
+</method>
+<method selector='ignoresSiblingOrder'>
+<retval type64='B'/>
+</method>
+<method selector='paused'>
+<retval type64='B'/>
+</method>
+<method selector='setAsynchronous:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='setIgnoresSiblingOrder:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='setPaused:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='setShowsDrawCount:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='setShowsFPS:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='setShowsNodeCount:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='showsDrawCount'>
+<retval type64='B'/>
+</method>
+<method selector='showsFPS'>
+<retval type64='B'/>
+</method>
+<method selector='showsNodeCount'>
+<retval type64='B'/>
+</method>
+</class>
+</signatures>
