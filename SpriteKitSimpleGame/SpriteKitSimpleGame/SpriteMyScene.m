@@ -16,6 +16,28 @@
 @property (nonatomic) SKSpriteNode * player;
 @end
 
+static inline CGPoint rwAdd(CGPoint a, CGPoint b) {
+    return CGPointMake(a.x + b.x, a.y + b.y);
+}
+
+static inline CGPoint rwSub(CGPoint a, CGPoint b) {
+    return CGPointMake(a.x - b.x, a.y - b.y);
+}
+
+static inline CGPoint rwMult(CGPoint a, float b) {
+    return CGPointMake(a.x * b, a.y * b);
+}
+
+static inline float rwLength(CGPoint a) {
+    return sqrtf(a.x * a.x + a.y * a.y);
+}
+
+// Makes a vector have a length of 1
+static inline CGPoint rwNormalize(CGPoint a) {
+    float length = rwLength(a);
+    return CGPointMake(a.x / length, a.y / length);
+}
+
 @implementation SpriteMyScene
 
 -(id)initWithSize:(CGSize)size {
@@ -85,6 +107,43 @@
     }
     
     [self updateWithTimeSinceLastUpdate:timeSinceLast];
+    
+}
+
+-(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
+    
+    // 1 - Choose one of the touches to work with
+    UITouch * touch = [touches anyObject];
+    CGPoint location = [touch locationInNode:self];
+    
+    // 2 - Set up initial location of projectile
+    SKSpriteNode * projectile = [SKSpriteNode spriteNodeWithImageNamed:@"projectile"];
+    projectile.position = self.player.position;
+    
+    // 3- Determine offset of location to projectile
+    CGPoint offset = rwSub(location, projectile.position);
+    
+    // 4 - Bail out if you are shooting down or backwards
+    if (offset.x <= 0) return;
+    
+    // 5 - OK to add now - we've double checked position
+    [self addChild:projectile];
+    
+    // 6 - Get the direction of where to shoot
+    CGPoint direction = rwNormalize(offset);
+    
+    // 7 - Make it shoot far enough to be guaranteed off screen
+    CGPoint shootAmount = rwMult(direction, 1000);
+    
+    // 8 - Add the shoot amount to the current position
+    CGPoint realDest = rwAdd(shootAmount, projectile.position);
+    
+    // 9 - Create the actions
+    float velocity = 480.0/1.0;
+    float realMoveDuration = self.size.width / velocity;
+    SKAction * actionMove = [SKAction moveTo:realDest duration:realMoveDuration];
+    SKAction * actionMoveDone = [SKAction removeFromParent];
+    [projectile runAction:[SKAction sequence:@[actionMove, actionMoveDone]]];
     
 }
 
