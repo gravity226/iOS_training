@@ -24,6 +24,9 @@
 		D3C06DAF18ECDB2500EFEC99 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3C06D8A18ECDB2500EFEC99 /* UIKit.framework */; };
 		D3C06DB718ECDB2500EFEC99 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D3C06DB518ECDB2500EFEC99 /* InfoPlist.strings */; };
 		D3C06DB918ECDB2500EFEC99 /* SpriteKitSimpleGameTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D3C06DB818ECDB2500EFEC99 /* SpriteKitSimpleGameTests.m */; };
+		D3C06E0F18ED7C9A00EFEC99 /* background-music-aac.caf in Resources */ = {isa = PBXBuildFile; fileRef = D3C06E0C18ED7C9A00EFEC99 /* background-music-aac.caf */; };
+		D3C06E1018ED7C9A00EFEC99 /* pew-pew-lei.caf in Resources */ = {isa = PBXBuildFile; fileRef = D3C06E0D18ED7C9A00EFEC99 /* pew-pew-lei.caf */; };
+		D3C06E1118ED7C9A00EFEC99 /* sprites.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D3C06E0E18ED7C9A00EFEC99 /* sprites.atlas */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +63,9 @@
 		D3C06DB418ECDB2500EFEC99 /* SpriteKitSimpleGameTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SpriteKitSimpleGameTests-Info.plist"; sourceTree = "<group>"; };
 		D3C06DB618ECDB2500EFEC99 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D3C06DB818ECDB2500EFEC99 /* SpriteKitSimpleGameTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpriteKitSimpleGameTests.m; sourceTree = "<group>"; };
+		D3C06E0C18ED7C9A00EFEC99 /* background-music-aac.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "background-music-aac.caf"; sourceTree = "<group>"; };
+		D3C06E0D18ED7C9A00EFEC99 /* pew-pew-lei.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "pew-pew-lei.caf"; sourceTree = "<group>"; };
+		D3C06E0E18ED7C9A00EFEC99 /* sprites.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = sprites.atlas; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +137,7 @@
 				D3C06DA318ECDB2500EFEC99 /* Spaceship.png */,
 				D3C06DA518ECDB2500EFEC99 /* Images.xcassets */,
 				D3C06D8F18ECDB2500EFEC99 /* Supporting Files */,
+				D3C06E0A18ED7C9A00EFEC99 /* SpriteKitSimpleGameResources */,
 			);
 			path = SpriteKitSimpleGame;
 			sourceTree = "<group>";
@@ -162,6 +169,24 @@
 				D3C06DB518ECDB2500EFEC99 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D3C06E0A18ED7C9A00EFEC99 /* SpriteKitSimpleGameResources */ = {
+			isa = PBXGroup;
+			children = (
+				D3C06E0B18ED7C9A00EFEC99 /* Sounds */,
+				D3C06E0E18ED7C9A00EFEC99 /* sprites.atlas */,
+			);
+			path = SpriteKitSimpleGameResources;
+			sourceTree = "<group>";
+		};
+		D3C06E0B18ED7C9A00EFEC99 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				D3C06E0C18ED7C9A00EFEC99 /* background-music-aac.caf */,
+				D3C06E0D18ED7C9A00EFEC99 /* pew-pew-lei.caf */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,10 +266,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3C06E1118ED7C9A00EFEC99 /* sprites.atlas in Resources */,
+				D3C06E0F18ED7C9A00EFEC99 /* background-music-aac.caf in Resources */,
 				D3C06D9318ECDB2500EFEC99 /* InfoPlist.strings in Resources */,
 				D3C06DA618ECDB2500EFEC99 /* Images.xcassets in Resources */,
 				D3C06DA418ECDB2500EFEC99 /* Spaceship.png in Resources */,
 				D3C06D9C18ECDB2500EFEC99 /* Main.storyboard in Resources */,
+				D3C06E1018ED7C9A00EFEC99 /* pew-pew-lei.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,6 +501,7 @@
 				D3C06DBE18ECDB2500EFEC99 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D3C06DBF18ECDB2500EFEC99 /* Build configuration list for PBXNativeTarget "SpriteKitSimpleGameTests" */ = {
 			isa = XCConfigurationList;
@@ -481,6 +510,7 @@
 				D3C06DC118ECDB2500EFEC99 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
