@@ -27,6 +27,7 @@
 		D3C06E0F18ED7C9A00EFEC99 /* background-music-aac.caf in Resources */ = {isa = PBXBuildFile; fileRef = D3C06E0C18ED7C9A00EFEC99 /* background-music-aac.caf */; };
 		D3C06E1018ED7C9A00EFEC99 /* pew-pew-lei.caf in Resources */ = {isa = PBXBuildFile; fileRef = D3C06E0D18ED7C9A00EFEC99 /* pew-pew-lei.caf */; };
 		D3C06E1118ED7C9A00EFEC99 /* sprites.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D3C06E0E18ED7C9A00EFEC99 /* sprites.atlas */; };
+		D3C06E1418ED8BAF00EFEC99 /* GameOverScene.m in Sources */ = {isa = PBXBuildFile; fileRef = D3C06E1318ED8BAF00EFEC99 /* GameOverScene.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,8 @@
 		D3C06E0C18ED7C9A00EFEC99 /* background-music-aac.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "background-music-aac.caf"; sourceTree = "<group>"; };
 		D3C06E0D18ED7C9A00EFEC99 /* pew-pew-lei.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "pew-pew-lei.caf"; sourceTree = "<group>"; };
 		D3C06E0E18ED7C9A00EFEC99 /* sprites.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = sprites.atlas; sourceTree = "<group>"; };
+		D3C06E1218ED8BAF00EFEC99 /* GameOverScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameOverScene.h; sourceTree = "<group>"; };
+		D3C06E1318ED8BAF00EFEC99 /* GameOverScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameOverScene.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +141,8 @@
 				D3C06DA518ECDB2500EFEC99 /* Images.xcassets */,
 				D3C06D8F18ECDB2500EFEC99 /* Supporting Files */,
 				D3C06E0A18ED7C9A00EFEC99 /* SpriteKitSimpleGameResources */,
+				D3C06E1218ED8BAF00EFEC99 /* GameOverScene.h */,
+				D3C06E1318ED8BAF00EFEC99 /* GameOverScene.m */,
 			);
 			path = SpriteKitSimpleGame;
 			sourceTree = "<group>";
@@ -291,6 +296,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3C06E1418ED8BAF00EFEC99 /* GameOverScene.m in Sources */,
 				D3C06D9518ECDB2500EFEC99 /* main.m in Sources */,
 				D3C06DA218ECDB2500EFEC99 /* SpriteMyScene.m in Sources */,
 				D3C06D9918ECDB2500EFEC99 /* SpriteAppDelegate.m in Sources */,

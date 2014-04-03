@@ -7,13 +7,19 @@
 //
 
 #import "SpriteMyScene.h"
+#import "GameOverScene.h"
+
+static const uint32_t projectileCategory     =  0x1 << 0;
+static const uint32_t monsterCategory        =  0x1 << 1;
 
 // 1
-@interface SpriteMyScene ()
+@interface SpriteMyScene () <SKPhysicsContactDelegate>
 
 @property (nonatomic) NSTimeInterval lastSpawnTimeInterval;
 @property (nonatomic) NSTimeInterval lastUpdateTimeInterval;
 @property (nonatomic) SKSpriteNode * player;
+@property (nonatomic) int monstersDestroyed;
+
 @end
 
 static inline CGPoint rwAdd(CGPoint a, CGPoint b) {
@@ -54,6 +60,8 @@ static inline CGPoint rwNormalize(CGPoint a) {
         self.player.position = CGPointMake(self.player.size.width/2, self.frame.size.height/2);
         [self addChild:self.player];
         
+        self.physicsWorld.gravity = CGVectorMake(0,0);
+        self.physicsWorld.contactDelegate = self;
     }
     return self;
 }
@@ -74,6 +82,12 @@ static inline CGPoint rwNormalize(CGPoint a) {
     monster.position = CGPointMake(self.frame.size.width + monster.size.width/2, actualY);
     [self addChild:monster];
     
+    monster.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:monster.size]; // 1
+    monster.physicsBody.dynamic = YES; // 2
+    monster.physicsBody.categoryBitMask = monsterCategory; // 3
+    monster.physicsBody.contactTestBitMask = projectileCategory; // 4
+    monster.physicsBody.collisionBitMask = 0; // 5
+    
     // Determine speed of the monster
     int minDuration = 2.0;
     int maxDuration = 4.0;
@@ -83,7 +97,14 @@ static inline CGPoint rwNormalize(CGPoint a) {
     // Create the actions
     SKAction * actionMove = [SKAction moveTo:CGPointMake(-monster.size.width/2, actualY) duration:actualDuration];
     SKAction * actionMoveDone = [SKAction removeFromParent];
-    [monster runAction:[SKAction sequence:@[actionMove, actionMoveDone]]];
+    SKAction * loseAction = [SKAction runBlock:^{
+        SKTransition *reveal = [SKTransition flipHorizontalWithDuration:0.5];
+        SKScene * gameOverScene = [[GameOverScene alloc] initWithSize:self.size won:NO];
+        [self.view presentScene:gameOverScene transition: reveal];
+    }];
+    [monster runAction:[SKAction sequence:@[actionMove, loseAction, actionMoveDone]]];
+    
+    
     
 }
 
@@ -112,6 +133,8 @@ static inline CGPoint rwNormalize(CGPoint a) {
 
 -(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
     
+    [self runAction:[SKAction playSoundFileNamed:@"pew-pew-lei.caf" waitForCompletion:NO]];
+    
     // 1 - Choose one of the touches to work with
     UITouch * touch = [touches anyObject];
     CGPoint location = [touch locationInNode:self];
@@ -122,6 +145,13 @@ static inline CGPoint rwNormalize(CGPoint a) {
     
     // 3- Determine offset of location to projectile
     CGPoint offset = rwSub(location, projectile.position);
+    
+    projectile.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:projectile.size.width/2];
+    projectile.physicsBody.dynamic = YES;
+    projectile.physicsBody.categoryBitMask = projectileCategory;
+    projectile.physicsBody.contactTestBitMask = monsterCategory;
+    projectile.physicsBody.collisionBitMask = 0;
+    projectile.physicsBody.usesPreciseCollisionDetection = YES;
     
     // 4 - Bail out if you are shooting down or backwards
     if (offset.x <= 0) return;
@@ -145,6 +175,43 @@ static inline CGPoint rwNormalize(CGPoint a) {
     SKAction * actionMoveDone = [SKAction removeFromParent];
     [projectile runAction:[SKAction sequence:@[actionMove, actionMoveDone]]];
     
+}
+
+- (void)projectile:(SKSpriteNode *)projectile didCollideWithMonster:(SKSpriteNode *)monster {
+    NSLog(@"Hit");
+    [projectile removeFromParent];
+    [monster removeFromParent];
+    
+    self.monstersDestroyed++;
+    if (self.monstersDestroyed > 30) {
+        SKTransition *reveal = [SKTransition flipHorizontalWithDuration:0.5];
+        SKScene * gameOverScene = [[GameOverScene alloc] initWithSize:self.size won:YES];
+        [self.view presentScene:gameOverScene transition: reveal];
+    }
+}
+
+- (void)didBeginContact:(SKPhysicsContact *)contact
+{
+    // 1
+    SKPhysicsBody *firstBody, *secondBody;
+    
+    if (contact.bodyA.categoryBitMask < contact.bodyB.categoryBitMask)
+    {
+        firstBody = contact.bodyA;
+        secondBody = contact.bodyB;
+    }
+    else
+    {
+        firstBody = contact.bodyB;
+        secondBody = contact.bodyA;
+    }
+    
+    // 2
+    if ((firstBody.categoryBitMask & projectileCategory) != 0 &&
+        (secondBody.categoryBitMask & monsterCategory) != 0)
+    {
+        [self projectile:(SKSpriteNode *) firstBody.node didCollideWithMonster:(SKSpriteNode *) secondBody.node];
+    }
 }
 
 @end
